@@ -21,18 +21,17 @@ aws secretsmanager get-secret-value --secret-id SSOSyncGoogleCredentials | jq -r
 
 echo "Syncing.."
 $SSOSYNC \
-  --access-token "$SCIMEndpointAccessToken" \
-  --endpoint "$SCIMEndpointUrl" \
-  --google-admin  "$GoogleAdminEmail" \
+  --access-token       "$SCIMEndpointAccessToken" \
+  --endpoint           "$SCIMEndpointUrl" \
+  --google-admin       "$GoogleAdminEmail" \
   --google-credentials "$GoogleCredentials" \
-  --sync-method "users_groups" \
-  --include-groups "sso_database_admin@$DOMAIN" \
-  --include-groups "sso_developer@$DOMAIN" \
-  --include-groups "sso_developer_lead@$DOMAIN" \
-  --include-groups "sso_devops@$DOMAIN" \
-  --include-groups "sso_qa@$DOMAIN" \
-  --include-groups "sso_risk_analyst@$DOMAIN" \
-  --include-groups "sso_risk_developer@$DOMAIN" \
+  --sync-method         "users_groups" \
+  --include-groups      "sso_database_admin@$DOMAIN" \
+  --include-groups      "sso_developer@$DOMAIN" \
+  --include-groups      "sso_developer_lead@$DOMAIN" \
+  --include-groups      "sso_devops@$DOMAIN" \
+  --include-groups      "sso_finance@$DOMAIN" \
+  --include-groups      "sso_qa@$DOMAIN" \
+  --include-groups      "sso_risk_analyst@$DOMAIN" \
+  --include-groups      "sso_risk_developer@$DOMAIN" \
   --debug
-
-#  --include-groups "sso_database_admin@$DOMAIN,sso_developer@$DOMAIN,sso_developer_lead@$DOMAIN,sso_devops@$DOMAIN,sso_qa@$DOMAIN,sso_risk_analyst@$DOMAIN,sso_risk_developer@$DOMAIN" \
