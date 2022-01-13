@@ -34,4 +34,5 @@ $SSOSYNC \
   --include-groups      "sso_qa@$DOMAIN" \
   --include-groups      "sso_risk_analyst@$DOMAIN" \
   --include-groups      "sso_risk_developer@$DOMAIN" \
+  --include-groups      "sso_nc_pm@$DOMAIN" \
   --debug
