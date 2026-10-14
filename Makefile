@@ -1,8 +1,9 @@
 OUTPUT = main # Referenced as Handler in template.yaml
 RELEASER = goreleaser
 PACKAGED_TEMPLATE = packaged.yaml
-STACK_NAME := $(STACK_NAME)
-S3_BUCKET := $(S3_BUCKET)
+# Labmda resides in `creditninja` account
+STACK_NAME = serverlessrepo-ssosync-redeploy
+S3_BUCKET = ssosync-sam-package-bucket
 TEMPLATE = template.yaml
 APP_NAME 	 ?= ssosync
 
